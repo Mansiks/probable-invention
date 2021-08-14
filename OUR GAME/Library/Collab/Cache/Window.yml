@@ -14,8 +14,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   SimpleSelectedItems:
     m_Keys:
-    - Packages/manifest.json
-    - Packages/packages-lock.json
+    - Assets/Scripts/Player Scripts/dsfkgmjdlkjg.cs
+    - Assets/Scripts/Player Scripts/dsfkgmjdlkjg.cs.meta
     - 
     m_Values: 010101
   RevisionSummary: 
