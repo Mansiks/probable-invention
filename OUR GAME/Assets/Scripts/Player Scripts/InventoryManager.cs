@@ -4,12 +4,11 @@ using UnityEngine;
 
 public class InventoryManager : MonoBehaviour
 {
-    [SerializeField] public List<string> inventory = new List<string>();
-    public int a;
     [SerializeField] public int slot;
-    [SerializeField] public GameObject item1;
-    [SerializeField] public GameObject item2;
-    [SerializeField] public GameObject item3;
+    [SerializeField] public GameObject[] hotbar = new GameObject[3];
+    public GameObject flashlight;
+    public GameObject gun;
+    public GameObject third;
     public bool hasGun;
     public GameObject overworldGun;
     public GameObject gunTrigger;
@@ -20,9 +19,9 @@ public class InventoryManager : MonoBehaviour
         {
             overworldGun.SetActive(false);
             hasGun = true;
-            item1.SetActive(false);
-            item2.SetActive(true);
-            item3.SetActive(false);
+            hotbar[0].SetActive(false);
+            hotbar[1].SetActive(hasGun);
+            hotbar[2].SetActive(false);
             slot = 2;
             gunTrigger.SetActive(false);
         }
@@ -32,6 +31,9 @@ public class InventoryManager : MonoBehaviour
     void Start()
     {
         hasGun = false;
+        hotbar[0] = flashlight;
+        hotbar[1] = gun;
+        hotbar[2] = third;
     }
 
     // Update is called once per frame
@@ -39,37 +41,22 @@ public class InventoryManager : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.Alpha1))
         {
-            item1.SetActive(true);
-            item2.SetActive(false);
-            item3.SetActive(false);
+            hotbar[0].SetActive(true);
+            hotbar[1].SetActive(false);
+            hotbar[2].SetActive(false);
             slot = 1;
         } else if (Input.GetKeyDown(KeyCode.Alpha2))
         {
-            item1.SetActive(false);
-            item2.SetActive(hasGun);
-            item3.SetActive(false);
+            hotbar[0].SetActive(false);
+            hotbar[1].SetActive(hasGun);
+            hotbar[2].SetActive(false);
             slot = 2;
         } else if (Input.GetKeyDown(KeyCode.Alpha3))
         {
-            item1.SetActive(false);
-            item2.SetActive(false);
-            item3.SetActive(true);
+            hotbar[0].SetActive(false);
+            hotbar[1].SetActive(false);
+            hotbar[2].SetActive(hasGun);
             slot = 3;
         }
-    }
-
-    void addItem(string itemName)
-    {
-        inventory.Add(itemName);
-    }
-
-    void useItem(string itemName)
-    {
-        inventory.Remove(itemName);
-    }
-
-    int checkItemsCount(string itemName)
-    {
-        return inventory.Count;
     }
 }

@@ -14,10 +14,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   SimpleSelectedItems:
     m_Keys:
-    - Assets/Scripts/Player Scripts/dsfkgmjdlkjg.cs
-    - Assets/Scripts/Player Scripts/dsfkgmjdlkjg.cs.meta
     - 
-    m_Values: 010101
+    m_Values: 01
   RevisionSummary: 
   ChangesSearchValue: 
   SelectedHistoryRevision: 

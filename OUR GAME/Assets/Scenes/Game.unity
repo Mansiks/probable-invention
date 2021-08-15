@@ -20,7 +20,7 @@ RenderSettings:
   m_FogDensity: 0.01
   m_LinearFogStart: 0
   m_LinearFogEnd: 300
-  m_AmbientSkyColor: {r: 0, g: 0.09411765, b: 0.42352942, a: 1}
+  m_AmbientSkyColor: {r: 1, g: 0.690561, b: 0.3726415, a: 1}
   m_AmbientEquatorColor: {r: 0.114, g: 0.125, b: 0.133, a: 1}
   m_AmbientGroundColor: {r: 0.047, g: 0.043, b: 0.035, a: 1}
   m_AmbientIntensity: 1
@@ -355,10 +355,10 @@ Light:
   m_Type: 0
   m_Shape: 0
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_Intensity: 1
+  m_Intensity: 3
   m_Range: 10
-  m_SpotAngle: 179
-  m_InnerSpotAngle: 21.80208
+  m_SpotAngle: 60
+  m_InnerSpotAngle: 6
   m_CookieSize: 10
   m_Shadows:
     m_Type: 1
@@ -386,7 +386,7 @@ Light:
       e32: 0
       e33: 1
     m_UseCullingMatrixOverride: 0
-  m_Cookie: {fileID: 8400000, guid: 506a46e9bece3174986bb80fda845f10, type: 2}
+  m_Cookie: {fileID: 0}
   m_DrawHalo: 0
   m_Flare: {fileID: 0}
   m_RenderMode: 0
@@ -394,7 +394,7 @@ Light:
     serializedVersion: 2
     m_Bits: 4294967295
   m_RenderingLayerMask: 1
-  m_Lightmapping: 4
+  m_Lightmapping: 2
   m_LightShadowCasterMode: 0
   m_AreaSize: {x: 1, y: 1}
   m_BounceIntensity: 1
@@ -1399,7 +1399,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 477747576}
-  m_LocalRotation: {x: 0.9330127, y: 0.06698729, z: 0.25000012, w: -0.25000006}
+  m_LocalRotation: {x: 0.0669873, y: -0.9330127, z: -0.25000006, w: -0.25000012}
   m_LocalPosition: {x: 0, y: 3, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
@@ -7515,6 +7515,36 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1382188697}
   m_CullTransparentMesh: 1
+--- !u!1 &1393705543
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1393705544}
+  m_Layer: 0
+  m_Name: Empty
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1393705544
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1393705543}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 923.8035, y: 603.3817, z: 1656.0194}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 20
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1407047608
 GameObject:
   m_ObjectHideFlags: 0
@@ -7942,12 +7972,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fcf6f24caafeea5478af6924836537d9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  inventory: []
-  a: 0
   slot: 0
-  item1: {fileID: 592263403}
-  item2: {fileID: 466445059}
-  item3: {fileID: 0}
+  hotbar:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  flashlight: {fileID: 592263403}
+  gun: {fileID: 466445059}
+  third: {fileID: 1393705543}
   hasGun: 0
   overworldGun: {fileID: 48050765}
   gunTrigger: {fileID: 1764489540}
@@ -8528,7 +8560,7 @@ Transform:
   m_GameObject: {fileID: 1764489540}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 760, y: 0.1, z: 740}
-  m_LocalScale: {x: 5, y: 10, z: 5}
+  m_LocalScale: {x: 7, y: 10, z: 7}
   m_Children:
   - {fileID: 48050769}
   m_Father: {fileID: 0}

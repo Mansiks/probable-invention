@@ -51,6 +51,7 @@
      <Compile Include="Assets\Scripts\NPC\NPC_Task.cs" />
      <Compile Include="Assets\Scripts\victory\Victory.cs" />
      <Compile Include="Assets\Scripts\MenuScripts\SceneTransition.cs" />
+     <Compile Include="Assets\Scripts\Player Scripts\InventoryManager.cs" />
      <Compile Include="Assets\Scripts\MenuScripts\SafingLoading\SafingLoading.cs" />
      <Compile Include="Assets\Scripts\Player Scripts\PickUp.cs" />
      <Compile Include="Assets\Scripts\Player Scripts\Weapon.cs" />
@@ -58,10 +59,8 @@
      <Compile Include="Assets\Scripts\NPC\DialogScript.cs" />
      <Compile Include="Assets\Mods\runner\Scripts\Playermove.cs" />
      <Compile Include="Assets\Scripts\NPC\Object_Quest.cs" />
-     <Compile Include="Assets\Scripts\Player Scripts\dsfkgmjdlkjg.cs" />
      <Compile Include="Assets\Scripts\Day &amp; Weather\DayChanger.cs" />
      <Compile Include="Assets\Scripts\MenuScripts\ButtonSelect.cs" />
-     <Compile Include="Assets\Scripts\Player Scripts\ildlijg&apos;.cs" />
      <Compile Include="Assets\Scripts\Player Scripts\KillScript.cs" />
      <Compile Include="Assets\Scripts\Day &amp; Weather\DuskChanger.cs" />
      <Compile Include="Assets\Scripts\NPC\TimedObjectDestructor.cs" />
