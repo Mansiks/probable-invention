@@ -94,9 +94,10 @@
     <Compile Include="Assets\Scripts\Player Scripts\Battery.cs" />
     <Compile Include="Assets\AssetStorePacks\Standard Assets\Environment\Water\Water\Scripts\WaterTile.cs" />
     <Compile Include="Assets\Scripts\NPC\Quest_Event.cs" />
+    <Compile Include="Assets\Scripts\Water Script\WaterLevelManager.cs" />
     <Compile Include="Assets\AssetStorePacks\Standard Assets\Environment\Water\Water\Scripts\SpecularLighting.cs" />
     <Compile Include="Assets\Scripts\Interface\Crosshair.cs" />
-    <Compile Include="Assets\Scripts\Water Script\WaterLevelManager.cs" />
+    <Compile Include="Assets\Scripts\Day &amp; Weather\NightCollider.cs" />
   </ItemGroup>
   <ItemGroup>
      <None Include="Assets\AssetStorePacks\Standard Assets\Prototyping\Shaders\WorldCoordDiffuse.shader" />
