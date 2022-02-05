@@ -8,9 +8,7 @@ public class NightChanger : MonoBehaviour
     [SerializeField] Gradient directLight;
     [SerializeField] Gradient ambLight;
     const float timeDayInSeconds = 60f;
-    public bool isNight = false;
-    public bool isEvening = false;
-    [SerializeField, Range(0f, 1f)] float timeProgress;
+    [SerializeField, Range(0f, 1f)] public float timeProgress;
 
     [SerializeField] Light lightSource;
 
@@ -29,16 +27,6 @@ public class NightChanger : MonoBehaviour
         if (timeProgress > 1f) timeProgress = 0f;
         lightSource.color = directLight.Evaluate(timeProgress);
         RenderSettings.ambientLight = ambLight.Evaluate(timeProgress);
-        if (timeProgress > 0.5f && timeProgress < 0.75)
-        {
-            isNight = true;
-        }
-        else isNight = false;
-        if (timeProgress > 0.25f && timeProgress < 0.5f || timeProgress > 0.75f && timeProgress < 1f)
-        {
-            isEvening = true;
-        }
-        else isEvening = false;
         lightSource.transform.localEulerAngles = new Vector3(360f * timeProgress - 150, defaultAngles.x, defaultAngles.z);
     }
 }

@@ -14,7 +14,7 @@ public class RainScript : MonoBehaviour
     public bool isRaining;
     public float particles;
 
-    const int MAX_PARTICLES = 1000;
+    const int MAX_PARTICLES = 10000;
 
     // Start is called before the first frame update
     void Start()
@@ -34,7 +34,7 @@ public class RainScript : MonoBehaviour
         {
             isRaining = true;
             nextRainEnd = timer + 5;
-            particles += 50 * Time.deltaTime;
+            particles += MAX_PARTICLES / 20 * Time.deltaTime;
             rainSource.maxParticles = (int) particles;
             if (rainSource.maxParticles >= MAX_PARTICLES)
             {
@@ -47,7 +47,7 @@ public class RainScript : MonoBehaviour
         {
             isRaining = false;
             nextRain = timer + 5;
-            particles -= 50 * Time.deltaTime;
+            particles -= MAX_PARTICLES / 20 * Time.deltaTime;
             rainSource.maxParticles = (int) particles;
             if (rainSource.maxParticles <= 0)
             {

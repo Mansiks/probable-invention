@@ -14,9 +14,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   SimpleSelectedItems:
     m_Keys:
-    - Assets/Scripts/Day & Weather/RainScript.cs
+    - Assets/Materials/DomeMaterial.mat
+    - Assets/Materials/DomeMaterial.mat.meta
+    - Assets/Textures/Map/dome.blend
     - 
-    m_Values: 0101
+    m_Values: 01010101
   RevisionSummary: 
   ChangesSearchValue: 
   SelectedHistoryRevision: 
